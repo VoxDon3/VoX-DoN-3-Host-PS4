@@ -1,22 +1,23 @@
 CACHE MANIFEST
 # rev 20260924-zrm-lapse-integration (upstream lapse/poops chains; firmware-correct GoldHEN)
+# rev2 2026-09-24: stripped trailing "#<sha>" suffixes so WebKit AppCache update succeeds
 
-chain_lapse.js #fd0cc044e03be88d1c89089a7d8dbb2d2c9ea2f3a485f0ab9089bb36d92d1a34
-chain_poops.js #c41d147644d97656ba2f6c85ba1b61f3c8315e16c2367772035d56d2336babdd
-core.js #a4e04514f3a88eafa67d2ed7e983beb5e72d749cfe5ff0879aafc65d8331349e
-core.js?v=10 #a4e04514f3a88eafa67d2ed7e983beb5e72d749cfe5ff0879aafc65d8331349e
-int64.js #a79a3334a3f2c75b9a238ab1093796e326251c97ac5d02663eae5b14bf80f652
-mem.js #4a1b688e8061372bc8400e911c8e191b7e19e4b6286dcdeb3eef4971c5168a22
-patches/1100.bin #15497a2b748dafd49bfb89c51ed048d0c5ba3c5092c5254da46dd4443f80983b
-patches/1150.bin #d4e3a514e462b973842e634eba6c90136dbfd864a208f8c39c229055e5f2e1f9
-patches/1200.bin #87f1d40aea8fbf3adee7b8b5599d90c9d868436c15a498f2dce6bf5d96ae4d27
-patches/1250.bin #5baaf0bb2663064db1eb1bfd976bc3aa5087ab7f0963648cb6fcb216adce714d
-patches/1300.bin #be70930d96c40b8d7ba03a57e2ea5c834b606fb74ed118756b4dea7fffaa1d57
-payload.bin #c6329401d1810e16c84e6474ac30977dbdc951987c10cdb559370de7d59db0b0
-ps4_offsets.js #1edbbc68e5b37de8d18755c9250736c0db9524bccda87f226f738c4f0daa8fcb
-rpc_worker.js #483925eafec03037596a71b95f046ba0ed1ab9018300ffd5ff718e2ce8c181dd
-run_lapse.html #9ea52172670e9789d6c19e9a9e7046c48b1bfb53a33fd3598ffc9831432889aa
-run_poops.html #4eb2b0ef1b1f0483d7febd870b40b9cca6a1dc9fea6f59349d76df1e3b1a5226
+chain_lapse.js
+chain_poops.js
+core.js
+core.js?v=10
+int64.js
+mem.js
+patches/1100.bin
+patches/1150.bin
+patches/1200.bin
+patches/1250.bin
+patches/1300.bin
+payload.bin
+ps4_offsets.js
+rpc_worker.js
+run_lapse.html
+run_poops.html
 
 NETWORK:
 *

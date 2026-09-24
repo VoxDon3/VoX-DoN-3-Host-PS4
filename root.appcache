@@ -3,80 +3,81 @@ CACHE MANIFEST
 # v3.3-voxui: VoX-DoN-3-style landing (main.css/voxbackground) + direct button-launch
 # unified GoldHEN payload (sha256 8a5745e5ee590c96bad002e2a2921ff0) on 13.02-13.52 + 6.00-11.02 routes
 # generated automatically; keep sorted so diffs are clean
+# rev2 2026-09-24: stripped trailing "#<sha>" suffixes (WebKit parsed them as part of the URL -> cache update failed -> stale/mixed JS on PS4); root index.html manifest -> root.appcache
 
 CACHE:
-cache-status.js #924f32f3b3785148b1eecd3826b77f5b048c9b4ae990d25f1a1259cd75ec8385
-index.html #03cb5297e22547c92db0c2ceb7c1049720a7fff2c22c0b434e61eee08f587ca1
-main.css #e314199e410582348db8251bb9f7c522321dcd393b89168c251d05f9771e5906
-pt/cache.appcache #5625b0ded175dbab4e59e9656ffb4d78e6e68052805678ca7238f1f29fde3316
-pt/core.js #341b13322524553b517c818aeb8edd07d592f3fa3a0218cefeddafc87e08e306
-pt/core.js?v=10 #341b13322524553b517c818aeb8edd07d592f3fa3a0218cefeddafc87e08e306
-pt/goldhen.bin #df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12
-pt/index.html #eb58a245ae6b69b3549dfb0132477f5ceb76dca2615c8eb5d961dc4077f355ef
-pt/int64.js #611da6a52da5ecf970a3718ab2a4561d3992c655c55342d066d12a9a50554f34
-pt/jb.html #8bb1f945e72896039d5f6f1a4f1a9ed9660ed09d1b6106492b225df401890835
-pt/jb.js #8fc2ce270c690ed73c88161705cd38f46c8f05c4944d736743dfc1d80f1bc48b
-pt/jb.js?v=10 #8fc2ce270c690ed73c88161705cd38f46c8f05c4944d736743dfc1d80f1bc48b
-pt/mem.js #ee5e52ea8c7ac349f3df4249e6245c6bb41aa9482081b452e629e589dead3b11
-pt/patches/1150.bin #d4e3a514e462b973842e634eba6c90136dbfd864a208f8c39c229055e5f2e1f9
-pt/patches/1200.bin #87f1d40aea8fbf3adee7b8b5599d90c9d868436c15a498f2dce6bf5d96ae4d27
-pt/patches/1250.bin #5baaf0bb2663064db1eb1bfd976bc3aa5087ab7f0963648cb6fcb216adce714d
-pt/patches/1300.bin #be70930d96c40b8d7ba03a57e2ea5c834b606fb74ed118756b4dea7fffaa1d57
-pt/patches/1302.bin #76584f8a02be806816aa7987ff6f2aed3a4a7f9494c49643e32f9cb9d75ab71b
-pt/patches/1350.bin #b9ab32fa10c272c341da97159a13818d98316b9998f3cf89d874e0b35e41cdbd
-pt/patches/1352.bin #a4ca7dc1f31a342cd80cb3b4aee0fcd56e92685e3ce1491c34cbd656c1af562c
-pt/payload2.bin #df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12
-pt/ps4_offsets.js #f7e98fb1906b0f02bc210198c00e685b5c9f02f768534eb3210f51498dddb9ff
-pt/rpc_worker.js #2d030c4cc92f46f96e1e4aea0463e1cde84e7f9a2ec17411473880a0c3f4e682
-pt/zrm/cache.appcache #24fcc124363faa59f8511b12de99386561da7958cc048f571885778e3328c826
-pt/zrm/chain_lapse.js #fd0cc044e03be88d1c89089a7d8dbb2d2c9ea2f3a485f0ab9089bb36d92d1a34
-pt/zrm/chain_poops.js #c41d147644d97656ba2f6c85ba1b61f3c8315e16c2367772035d56d2336babdd
-pt/zrm/core.js #a4e04514f3a88eafa67d2ed7e983beb5e72d749cfe5ff0879aafc65d8331349e
-pt/zrm/core.js?v=10 #a4e04514f3a88eafa67d2ed7e983beb5e72d749cfe5ff0879aafc65d8331349e
-pt/zrm/int64.js #a79a3334a3f2c75b9a238ab1093796e326251c97ac5d02663eae5b14bf80f652
-pt/zrm/mem.js #4a1b688e8061372bc8400e911c8e191b7e19e4b6286dcdeb3eef4971c5168a22
-pt/zrm/patches/1100.bin #15497a2b748dafd49bfb89c51ed048d0c5ba3c5092c5254da46dd4443f80983b
-pt/zrm/patches/1150.bin #d4e3a514e462b973842e634eba6c90136dbfd864a208f8c39c229055e5f2e1f9
-pt/zrm/patches/1200.bin #87f1d40aea8fbf3adee7b8b5599d90c9d868436c15a498f2dce6bf5d96ae4d27
-pt/zrm/patches/1250.bin #5baaf0bb2663064db1eb1bfd976bc3aa5087ab7f0963648cb6fcb216adce714d
-pt/zrm/patches/1300.bin #be70930d96c40b8d7ba03a57e2ea5c834b606fb74ed118756b4dea7fffaa1d57
-pt/zrm/payload.bin #c6329401d1810e16c84e6474ac30977dbdc951987c10cdb559370de7d59db0b0
-pt/zrm/ps4_offsets.js #1edbbc68e5b37de8d18755c9250736c0db9524bccda87f226f738c4f0daa8fcb
-pt/zrm/rpc_worker.js #483925eafec03037596a71b95f046ba0ed1ab9018300ffd5ff718e2ce8c181dd
-pt/zrm/run_lapse.html #9ea52172670e9789d6c19e9a9e7046c48b1bfb53a33fd3598ffc9831432889aa
-pt/zrm/run_poops.html #4eb2b0ef1b1f0483d7febd870b40b9cca6a1dc9fea6f59349d76df1e3b1a5226
-voxbackground.jpg #8864f65a2cf5b0b9e28ee345033ad78514a6e1448c6694fc8b533fab80b74a4b
-vx/cache.manifest #7125454b13247d27737a31a8656a2869c01686f475812cc62ec41545dbc5a4df
-vx/includes/image(5).jpg #bd305b6cf270fe909e948223e64df46c3486b493868fce860eb9b2fe0c1ff621
-vx/includes/script.js #e1ffd9fae52b89c843d103089e4c3737f50eb129f1b7f4b0248db6348c319738
-vx/includes/style.css #7fc30657605f2f0b6b379e98365f2ea11845d610f41957990aa87cf9eca86a43
-vx/index.html #6bfd1935c409009eb2bc773362a0df67b7fec55bceccbe981a9c33e57722a3f8
-vx/src/lapse.js #c53b8de62444a6c63633a9a025e2b1e6c1b4b71d5eef5bb62bfdfdcf8279ee13
-vx/src/loader.js #57f9bce0340bb5c7d59b24a5370c86300063edec435ece75c1491e55dbd980c8
-vx/src/main.js #799f5962c9f5084826804db5a2fffd8a38d70a9ce62637e195952ec572962eba
-vx/src/misc.js #4f96dddfda538e2776895979d55126a38ca3e3b1533a732e70115d09788c7834
-vx/src/netctrl.js #721513893cb7df03e822415ee917487361554baaaf4cf3a157ba96708d5913eb
-vx/src/payload.bin #df3f27c1b35bc7c40e3a08caab948930914dc7d0301a73b68945cf6ffe40ea12
-vx/src/ps4/constants.js #c832a6f7ba08b729a291a5807caf5f2caffac52823e32ca8bca6dbba3252e329
-vx/src/ps4/kernel.js #bb184cf282dcb9c94aec0a39306e93923ece1b549f847010fc8eb1fe0468ff33
-vx/src/ps4/patches/1000.bin #954ff624c9c92ab991c3e92a93fde1583da291dfd9674e245354c7efdcd07cf8
-vx/src/ps4/patches/1050.bin #fbf815d2d47a707cf788815ef11558fa6d8f718e628d508e8540417083c55e1f
-vx/src/ps4/patches/1100.bin #15497a2b748dafd49bfb89c51ed048d0c5ba3c5092c5254da46dd4443f80983b
-vx/src/ps4/patches/1102.bin #4634f7bcdaeea7a48307a6b0c2f0575dc131d4fcf15138c6678f18b4f19058fd
-vx/src/ps4/patches/600.bin #0926e4aad37d12795826c01c0341aac1e67daaa5d346d37a2f6179366a12eee0
-vx/src/ps4/patches/620.bin #e239de491039a189983157be063b99270b6834bcfeb8fe62092168b9c8ab4360
-vx/src/ps4/patches/650.bin #1083e8b16f1c3dbc26c94cd594a41e36642651fd400b19d7e57994fd37cba070
-vx/src/ps4/patches/670.bin #589afd201592ccefab68e460297f625ee8826fdab7a982e32c3550643903e171
-vx/src/ps4/patches/700.bin #b2793ae0c589b0746964693a5ab1795ff2516b5fcac6fa2e493814ce677b0cb7
-vx/src/ps4/patches/750.bin #70bb383269face27d5203be7aa83d0d184fd7f94b31f2403328b8cb733cc5b41
-vx/src/ps4/patches/800.bin #aa30be1ce005f10d6fdae3357e07c073bde4e0e1072514d324e1e6f71b660b2c
-vx/src/ps4/patches/850.bin #889aeea9e4d4316ca1cbbb49066faac85e90c3b0fc5bbea2126c6eac57ca977c
-vx/src/ps4/patches/900.bin #1645039fd48ec3f9b4fbbbb92daf7df5faf41e6bb8d815b4a8edb27f35fd9ae4
-vx/src/ps4/patches/903.bin #779a980d04afc6dc89ff6b77af058636904b3559734f9efe3c1d46d20dc14a73
-vx/src/ps4/patches/950.bin #d3d536b07cf9f07d91a18472255f71d83233d6b094628ced474477cd8b912608
-vx/src/ps4/userland.js #dc1ae1fd99829511818dd0ecde813e75287f804b4543af4186d09ab875d5c2a4
-vx/src/worker.js #75a85d10b6123645cc3e6385fb2c179a3ebf5c13ad97788ffd0c5f29382ddd7a
-vx/src/workers.js #bc69518f44a5adf08cd9bb52ed6cf72f830103d9d940f176b6b1372790e62d8d
+cache-status.js
+index.html
+main.css
+pt/cache.appcache
+pt/core.js
+pt/core.js?v=10
+pt/goldhen.bin
+pt/index.html
+pt/int64.js
+pt/jb.html
+pt/jb.js
+pt/jb.js?v=10
+pt/mem.js
+pt/patches/1150.bin
+pt/patches/1200.bin
+pt/patches/1250.bin
+pt/patches/1300.bin
+pt/patches/1302.bin
+pt/patches/1350.bin
+pt/patches/1352.bin
+pt/payload2.bin
+pt/ps4_offsets.js
+pt/rpc_worker.js
+pt/zrm/cache.appcache
+pt/zrm/chain_lapse.js
+pt/zrm/chain_poops.js
+pt/zrm/core.js
+pt/zrm/core.js?v=10
+pt/zrm/int64.js
+pt/zrm/mem.js
+pt/zrm/patches/1100.bin
+pt/zrm/patches/1150.bin
+pt/zrm/patches/1200.bin
+pt/zrm/patches/1250.bin
+pt/zrm/patches/1300.bin
+pt/zrm/payload.bin
+pt/zrm/ps4_offsets.js
+pt/zrm/rpc_worker.js
+pt/zrm/run_lapse.html
+pt/zrm/run_poops.html
+voxbackground.jpg
+vx/cache.manifest
+vx/includes/image(5).jpg
+vx/includes/script.js
+vx/includes/style.css
+vx/index.html
+vx/src/lapse.js
+vx/src/loader.js
+vx/src/main.js
+vx/src/misc.js
+vx/src/netctrl.js
+vx/src/payload.bin
+vx/src/ps4/constants.js
+vx/src/ps4/kernel.js
+vx/src/ps4/patches/1000.bin
+vx/src/ps4/patches/1050.bin
+vx/src/ps4/patches/1100.bin
+vx/src/ps4/patches/1102.bin
+vx/src/ps4/patches/600.bin
+vx/src/ps4/patches/620.bin
+vx/src/ps4/patches/650.bin
+vx/src/ps4/patches/670.bin
+vx/src/ps4/patches/700.bin
+vx/src/ps4/patches/750.bin
+vx/src/ps4/patches/800.bin
+vx/src/ps4/patches/850.bin
+vx/src/ps4/patches/900.bin
+vx/src/ps4/patches/903.bin
+vx/src/ps4/patches/950.bin
+vx/src/ps4/userland.js
+vx/src/worker.js
+vx/src/workers.js
 
 NETWORK:
 *
