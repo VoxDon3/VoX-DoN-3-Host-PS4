@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>VoX DoN 3 Host</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="landing">
+  <div class="bg-main"></div>
+  <div class="ui">
+    <header class="top">
+      <h1>VoX DoN 3 Host</h1>
+      <p class="fw-cover">PS4 &middot; 06.00 &rarr; 13.52</p>
+      <p>Firmware: <span id="current-fw">Not detected</span></p>
+      <p id="cache-status"></p>
+    </header>
+    <div class="mid"></div>
+    <a class="btn-jb" id="run-jb" href="vx/index.html" onclick="runJB();return false;">Jailbreak</a>
+  </div>
+  <script src="cache-status.js"></script>
+  <script>
+    (function () {
+      function firmwareNumber() {
+        var m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(navigator.userAgent || "");
+        if (!m) return null;
+        var ms = parseInt(m[2], 16).toString(16);
+        if (ms.length < 2) ms = "0" + ms;
+        return parseInt(m[1], 10) * 100 + parseInt(ms, 10);
+      }
+      window.runJB = function () {
+        var n = firmwareNumber();
+        var target;
+        if (n === null || n <= 1102)        target = "vx/index.html";        // 6.00 - 11.02 (VoxDon)
+        else if (n <= 1202)                 target = "pt/zrm/run_lapse.html"; // 11.50 / 12.00 / 12.02
+        else if (n === 1250 || n === 1300)  target = "pt/zrm/run_poops.html"; // 12.50 / 13.00
+        else                                target = "pt/jb.html";            // 12.52 / 13.02 / 13.04 / 13.50 / 13.52
+        window.location.href = target;
+      };
+      try {
+        var m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(navigator.userAgent || "");
+        var el = document.getElementById("current-fw");
+        if (el) {
+          if (m) {
+            var ms = parseInt(m[2], 16).toString(16);
+            if (ms.length < 2) ms = "0" + ms;
+            el.textContent = m[1] + "." + ms;
+          } else {
+            el.textContent = "Not detected";
+          }
+        }
+      } catch (e) {}
+      try { document.getElementById("run-jb").focus(); } catch (e) {}
+    })();
+  </script>
+</body>
+</html>

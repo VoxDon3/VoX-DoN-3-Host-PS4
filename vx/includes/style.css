@@ -1,0 +1,278 @@
+/* ps4Host_voxdon3 — full-page PS4 artwork UI (no developer credits) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #f2f4f8;
+  background: #050508;
+  overflow-x: hidden;
+}
+
+/* ===== Full-page PS4 image ===== */
+.bg-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-console {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.bg-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(4, 6, 12, 0.78) 0%,
+      rgba(4, 6, 12, 0.28) 32%,
+      rgba(4, 6, 12, 0.45) 62%,
+      rgba(4, 6, 12, 0.92) 100%),
+    radial-gradient(ellipse at 50% 28%, rgba(0, 229, 255, 0.14), transparent 58%);
+}
+
+/* ===== UI layer ===== */
+.ui-layer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px 22px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: #031018;
+  background: linear-gradient(145deg, #9ffffa, #00e5ff 48%, #007a9a);
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.brand-text {
+  text-align: left;
+}
+
+.brand-text h1 {
+  font-size: 1.28rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.5), 0 2px 8px rgba(0, 0, 0, 0.85);
+  line-height: 1.15;
+}
+
+.tagline {
+  font-size: 0.72rem;
+  color: rgba(190, 230, 255, 0.72);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+#UA {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #9ee9ff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* ===== Controls — different style from stock host ===== */
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-container {
+  background: rgba(6, 10, 18, 0.78);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  border-radius: 22px;
+  padding: 18px 16px 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.kernel-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin-bottom: 16px;
+}
+
+#kernel-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  background: linear-gradient(180deg, rgba(0, 40, 55, 0.75), rgba(0, 18, 28, 0.9));
+  color: #d8f8ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+#kernel-options input[type="radio"] {
+  accent-color: #00e5ff;
+  width: 17px;
+  height: 17px;
+}
+
+/* Jailbreak button — keep id="jeilbrek" for exploit scripts */
+#jeilbrek {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 17px 22px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.12rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: #031018;
+  cursor: pointer;
+  background:
+    linear-gradient(180deg, #b8fffb 0%, #00f0ff 38%, #00a8c8 100%);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.22),
+    0 0 32px rgba(0, 229, 255, 0.55),
+    0 10px 22px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+}
+
+#jeilbrek:hover {
+  filter: brightness(1.07);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(0, 229, 255, 0.7),
+    0 12px 26px rgba(0, 0, 0, 0.55);
+}
+
+#jeilbrek:active {
+  transform: scale(0.96);
+}
+
+.autoJb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  color: rgba(210, 235, 255, 0.88);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+#autoJbInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #00e5ff;
+}
+
+.mt-2 { margin-top: 0; }
+
+/* ===== Console: red while busy → green on success ===== */
+#console {
+  text-align: left;
+  background: rgba(4, 6, 12, 0.88);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  min-height: 120px;
+  max-height: 240px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "Consolas", "Courier New", monospace;
+  transition: color 0.25s ease, border-color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* Working / waiting — RED */
+#console.console-busy {
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 60, 60, 0.45);
+  text-shadow: 0 0 8px rgba(255, 40, 40, 0.35);
+}
+
+/* Success — GREEN */
+#console.console-ok {
+  color: #2dff7a;
+  border: 1px solid rgba(40, 255, 120, 0.5);
+  text-shadow: 0 0 10px rgba(40, 255, 120, 0.4);
+}
+
+/* Fail — darker red */
+#console.console-fail {
+  color: #ff2222;
+  border: 1px solid rgba(255, 30, 30, 0.55);
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+/* Hide residual stock elements */
+.media-box { display: none !important; }
+hr { display: none; }
+
+@media (max-width: 400px) {
+  .brand-text h1 { font-size: 1.05rem; }
+  #jeilbrek { font-size: 1rem; padding: 15px 16px; letter-spacing: 0.12em; }
+}
